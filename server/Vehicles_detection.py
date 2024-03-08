@@ -52,7 +52,7 @@ def vehicle_detection(video_source):
 
 @app.route('/video_feed')
 def video_feed():
-    return Response(vehicle_detection('./cctv footage/trafficvid2a.mp4'),
+    return Response(vehicle_detection('../cctv footage/trafficvid2a.mp4'),
                     mimetype='multipart/x-mixed-replace; boundary=frame')
 
 @app.route('/car_count')
