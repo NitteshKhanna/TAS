@@ -1,0 +1,21 @@
+button.start-cta
+{
+    background: linear-gradient(to right bottom, #313866, #504099);
+    position: absolute;
+    width: 5vw;
+    margin: 0;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    padding: .5vw;
+    top: calc(50% - 3vw);
+    left: calc(50% - 3vw);
+    font-size: 1rem;
+    border-radius: .3vw;
+    color: white;
+
+    &:hover
+    {
+        background: linear-gradient(to left bottom, #313866, #504099);
+    }
+}
