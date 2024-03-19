@@ -71,10 +71,10 @@ export class PageComponent {
       (<HTMLElement>document.querySelector(".start-cta")).style.display = "none";
       this.startDetection();
       this.startFetchingCarCounts();
-    (<HTMLElement>document.querySelector(".ctn")).style.display = "flex";
+    (<HTMLElement>document.querySelector(".traffic-panel")).style.display = "flex";
 
     });
-    (<HTMLElement>document.querySelector(".ctn")).style.display = "none";
+    (<HTMLElement>document.querySelector(".traffic-panel")).style.display = "none";
   }
   ngOnDestroy() {
     this.intervalIds.forEach(clearInterval);
