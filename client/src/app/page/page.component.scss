@@ -10,7 +10,7 @@ div.page-ctn
         width: 70vw;
         display: flex;
         flex-wrap: wrap;
-        row-gap: 1vw;
+        row-gap: 2vw;
         div.top, div.mid, div.bottom
         {
             flex-basis: 100%;
@@ -24,6 +24,7 @@ div.page-ctn
         div.mid
         {
             justify-content: space-evenly;
+            align-items: center;
         }
         div.vid-ctn
         {
@@ -34,6 +35,8 @@ div.page-ctn
             flex-wrap: wrap;
             width: 15vw;
             border-radius: .25vw;
+            height: 10vw;
+
             img.traffic-signal-vid
             {
                 flex-basis: 100%;
@@ -42,12 +45,13 @@ div.page-ctn
         }
         div.tra-ctn
         {
-            background-color: white;
+            background:linear-gradient(to right bottom, rgb(49, 49, 49), rgb(68, 68, 68));
             border: rgb(0, 0, 0) .1rem solid;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             width: 15vw;
+            height: 13vw;
             border-radius: .25vw;
             align-items: center;
             button.start-cta
@@ -67,6 +71,80 @@ div.page-ctn
                 &:hover
                 {
                     background: linear-gradient(to left bottom, #313866, #504099);
+                }
+            }
+            div.traffic-panel
+            {
+                width: 12vw;
+                display: flex;
+                flex-wrap: wrap;
+                div.top-sec, div.mid-sec, div.bottom-sec
+                {
+                    display: flex;
+                    flex-basis: 100%;
+                    flex-wrap: wrap;
+                    div.traffic-light
+                    {
+                        $traffic-signal-radius: 2vw;
+                        border-radius: 100%;
+                        width: $traffic-signal-radius;
+                        height: $traffic-signal-radius;
+                        border: black .1vw solid;
+                        background: linear-gradient(to right bottom, #f5ef25, orange);
+                        // background: linear-gradient(to right bottom, #0adb8b, green);
+                        // background: linear-gradient(to right bottom, #d32628, red);
+                    }
+                }
+                div.top-sec, div.bottom-sec
+                {
+                    justify-content: center;
+                }
+                .light-div
+                {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    .traffic-light
+                    {
+
+                    }
+                    .counter 
+                    {
+                        margin: .3rem;
+                        color: #ffffff;
+                        font-size: .8rem;
+                        font-weight: 400;
+                    }
+                }
+                div.light-div-nowrap
+                {
+                    text-align: center;
+                    width: min-content;
+                    align-items: center;
+                    .traffic-light
+                    {
+
+                    }
+                    .counter 
+                    {
+                        margin: .3rem;
+                        color: #ffffff;
+                        font-size: .8rem;
+                        font-weight: 400;
+                    }
+                }
+                div.mid-sec
+                {
+                    justify-content: space-between;
+                    align-self: center;
+                }
+                div.bottom-sec
+                {
+                    align-self: flex-end;
+                }
+                div.top-sec
+                {
+                    align-self: flex-start;
                 }
             }
         }

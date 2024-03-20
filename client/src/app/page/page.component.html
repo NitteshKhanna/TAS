@@ -1,27 +1,48 @@
 <div class="page-ctn">
     <div class="ctn">
         <div class="top">
-            <div class="vid-ctn">
+            <div id="vid1" class="vid-ctn">
                 <img class="traffic-signal-vid" src="http://localhost:5000/video_feed_1" alt="">
             </div>
         </div>
         <div class="mid">
-            <div class="vid-ctn">
+            <div id="vid2" class="vid-ctn">
                 <img class="traffic-signal-vid" src="http://localhost:5000/video_feed_2" alt="">
             </div>
             <div class="tra-ctn">
                 <div class="traffic-panel">
-                    Traffic Signal
+                    <div class="top-sec">
+                        <div class="light-div-nowrap">
+                            <div id="tra1" class="traffic-light"></div>
+                            <div id="c1" class="counter">{{signalCounterValues[0]}}</div>
+                        </div>
+                    </div>
+                    <div class="mid-sec">
+                        <div class="light-div">
+                            <div id="tra2" class="traffic-light"></div>
+                            <div id="c2" class="counter">{{signalCounterValues[1]}}</div>
+                        </div>
+                        <div class="light-div">
+                            <div id="c3" class="counter">{{signalCounterValues[2]}}</div>
+                            <div id="tra3" class="traffic-light"></div>
+                        </div>
+                    </div>
+                    <div class="bottom-sec">
+                        <div class="light-div-nowrap">
+                            <div id="c4" class="counter">{{signalCounterValues[3]}}</div>
+                            <div id="tra4" class="traffic-light"></div>
+                        </div>
+                    </div>
                 </div>
                 <button class="start-cta">Start</button>
             </div>
-            <div class="vid-ctn">
+            <div id="vid3" class="vid-ctn">
                 <img class="traffic-signal-vid" src="http://localhost:5000/video_feed_3" alt="">
             </div>
         </div>
         <div class="bottom">
             <div class="vid-ctn">
-                <img class="traffic-signal-vid" src="http://localhost:5000/video_feed_4" alt="">
+                <img id="vid4" class="traffic-signal-vid" src="http://localhost:5000/video_feed_4" alt="">
             </div>
         </div>
     </div>
