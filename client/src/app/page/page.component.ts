@@ -32,7 +32,7 @@ export class PageComponent {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      this.startFetchingCarCounts();
     })
     .catch(error => {
       console.error('Error:', error);
@@ -52,9 +52,8 @@ export class PageComponent {
     document.querySelector(".start-cta")?.addEventListener("click", ()=>{
       (<HTMLElement>document.querySelector(".start-cta")).style.display = "none";
       this.startDetection();
-      this.startFetchingCarCounts();
       this.setGreenLight(0);
-      this.startTimer();
+      
     (<HTMLElement>document.querySelector(".traffic-panel")).style.display = "flex";
 
     });
@@ -63,7 +62,8 @@ export class PageComponent {
   
   startFetchingCarCounts() {
     const feedCount = 4; 
-    let carCounts: number[][] = [];
+    let carCounts: number[][] = [], sortedCarCounts: number[][] = [], i, j, min, t, len;
+
     for (let feedId = 1; feedId <= feedCount; feedId++) {
       
         fetch(`http://localhost:5000/car_count_feed_${feedId}`)
@@ -71,8 +71,48 @@ export class PageComponent {
           .then(data => {
             this.carCounts[feedId] = data.car_count;
             carCounts.push([feedId, data.car_count])
+            if (feedId == feedCount)
+              console.log(carCounts);
+            // this.signalCounterValues = createSignalValues(this.signalDuration);
+            this.startTimer();
           })
           .catch(err => console.error(`Error fetching car count for feed ${feedId}:`, err));
+    }
+    
+    function createSignalValues(signalDuration: number)
+    {
+
+      // for (i = 0, len = carCounts.length; i < len; i++)
+      // {
+      //   min = carCounts[i];
+        
+      //   for (j = i; j < len; j++)
+      //   {
+      //     if (min[1] > carCounts[j][1])
+      //     {
+      //       t = min[1];
+      //       min[1] = carCounts[j][1];
+      //       carCounts[j][1] = t;
+      //     }
+      //   }
+      //   sortedCarCounts.push(min);
+      // }
+  
+      // let signalCounterValues = [];
+      
+      // for (i = 0; i < len; i++)
+      // {
+      //   for (j = 0; j < len; j++)
+      //   {
+      //     if (sortedCarCounts[j][0] == i)
+      //     {
+      //       signalCounterValues.push(((i + 1) * signalDuration))
+      //     }
+      //   }
+      // }
+      
+      
+      // return signalCounterValues;
     }
   }
 
