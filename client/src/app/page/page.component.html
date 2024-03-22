@@ -2,12 +2,14 @@
     <div class="ctn">
         <div class="top">
             <div id="vid1" class="vid-ctn">
-                <img class="traffic-signal-vid" src="http://localhost:5000/video_feed_1" alt="">
+                <p id="congestion1" class="congestion"></p>
+                <img id="img1" class="traffic-signal-vid" src="http://localhost:5000/video_feed_1" alt="">
             </div>
         </div>
         <div class="mid">
             <div id="vid2" class="vid-ctn">
-                <img class="traffic-signal-vid" src="http://localhost:5000/video_feed_2" alt="">
+                <p id="congestion2" class="congestion"></p>
+                <img id="img2" class="traffic-signal-vid" src="http://localhost:5000/video_feed_2" alt="">
             </div>
             <div class="tra-ctn">
                 <div class="traffic-panel">
@@ -20,16 +22,16 @@
                     <div class="mid-sec">
                         <div class="light-div">
                             <div id="tra2" class="traffic-light"></div>
-                            <div id="c2" class="counter">{{signalCounterValues[1]}}</div>
+                            <div id="c2" class="counter">{{signalCounterValues[3]}}</div>
                         </div>
                         <div class="light-div">
-                            <div id="c3" class="counter">{{signalCounterValues[2]}}</div>
+                            <div id="c3" class="counter">{{signalCounterValues[1]}}</div>
                             <div id="tra3" class="traffic-light"></div>
                         </div>
                     </div>
                     <div class="bottom-sec">
                         <div class="light-div-nowrap">
-                            <div id="c4" class="counter">{{signalCounterValues[3]}}</div>
+                            <div id="c4" class="counter">{{signalCounterValues[2]}}</div>
                             <div id="tra4" class="traffic-light"></div>
                         </div>
                     </div>
@@ -37,12 +39,14 @@
                 <button class="start-cta">Start</button>
             </div>
             <div id="vid3" class="vid-ctn">
-                <img class="traffic-signal-vid" src="http://localhost:5000/video_feed_3" alt="">
+                <p id="congestion3" class="congestion"></p>
+                <img id="img3" class="traffic-signal-vid" src="http://localhost:5000/video_feed_3" alt="">
             </div>
         </div>
         <div class="bottom">
-            <div class="vid-ctn">
-                <img id="vid4" class="traffic-signal-vid" src="http://localhost:5000/video_feed_4" alt="">
+            <div id="vid4" class="vid-ctn">
+                <p id="congestion4" class="congestion"></p>
+                <img id="img4" class="traffic-signal-vid" src="http://localhost:5000/video_feed_4" alt="">
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@ div.page-ctn
 {
     display: flex;
     justify-content: center;
-    padding-top: 5vw;
+    padding-top: 2vw;
     
     
     div.ctn
@@ -16,6 +16,8 @@ div.page-ctn
             flex-basis: 100%;
             display: flex;
             flex-wrap: wrap;
+            
+            
         }
         div.top, div.bottom
         {
@@ -28,19 +30,26 @@ div.page-ctn
         }
         div.vid-ctn
         {
-            background-color: white;
-            border: rgb(0, 0, 0) .1rem solid;
+            
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             width: 15vw;
-            border-radius: .25vw;
-            height: 10vw;
-
+            // height: 10vw;
+            
             img.traffic-signal-vid
             {
+                border-radius: .25vw;
+                border: rgb(0, 0, 0) .2rem solid;
                 flex-basis: 100%;
                 height: 10vw;
+            }
+            p.congestion
+            {
+                margin: 0;
+                padding: 0;
+                font-size: .9rem;
+                font-weight: 500;
             }
         }
         div.tra-ctn
